@@ -69,7 +69,7 @@ a:focus-visible {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1;
   padding-block: 1.25rem;
 }
 
@@ -349,3 +349,71 @@ a:focus-visible {
   font-size: 0.9rem;
 }
 
+/* Responsive design - Media queries */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .book-section {
+    padding-block: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-nav {
+    justify-content: center;
+    gap: 0.65rem 1rem;
+  }
+
+  .main-nav a {
+    font-size: 0.8rem;
+  }
+
+  .product-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .book-cover {
+    max-width: 350px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .event-item {
+    gap: 0.75rem;
+  }
+
+  .event-date {
+    flex-basis: 50px;
+  }
+
+  .event-details h3 {
+    font-size: 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button {
+    transition: none;
+  }
+}
