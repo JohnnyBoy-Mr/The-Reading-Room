@@ -2,22 +2,24 @@
 
 
 @theme {
-  /* Primary Colors */
-  --color-primary: #284e3a;
-  --color-primary-dark: #193827;
-
-  /* Background Colors */
-  --color-background: #faf7f0;
-  --color-surface: #e8e9dc;
+  /* Background */
+  --color-bg: #faf7f0;
 
   /* Text Colors */
-  --color-text: #273d30;
-  --color-muted: #59665b;
+  --color-ink: #273d30;
+  --color-ink-soft: #59665b;
 
-  /* Borders and Accents */
-  --color-border: #d9d9cd;
+  /* Primary and Accent Colors */
+  --color-ember: #284e3a;
+  --color-clay: #b58a4c;
+
+  /* Borders */
+  --color-line: #d9d9cd;
+
+  /* Additional Colors */
+  --color-primary-dark: #193827;
+  --color-surface: #e8e9dc;
   --color-white: #ffffff;
-  --color-accent: #b58a4c;
 
   /* Typography */
   --font-heading: Georgia, "Times New Roman", serif;
@@ -30,10 +32,8 @@
   --radius-bookstore: 6px;
 }
 
-
-
-@layer base {
-  body {
-    @apply m-0 min-w-0 bg-background text-text font-body leading-[1.6] wrap-break-word;
-  }
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
 }
