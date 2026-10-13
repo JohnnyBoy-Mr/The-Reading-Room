@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+
+@theme {
+  /* Primary Colors */
+  --color-primary: #284e3a;
+  --color-primary-dark: #193827;
+
+  /* Background Colors */
+  --color-background: #faf7f0;
+  --color-surface: #e8e9dc;
+
+  /* Text Colors */
+  --color-text: #273d30;
+  --color-muted: #59665b;
+
+  /* Borders and Accents */
+  --color-border: #d9d9cd;
+  --color-white: #ffffff;
+  --color-accent: #b58a4c;
+
+  /* Typography */
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  /* Container */
+  --container-width: 1200px;
+
+  /* Border Radius */
+  --radius-bookstore: 6px;
+}
+
+
+
+@layer base {
+  body {
+    @apply m-0 min-w-0 bg-background text-text font-body leading-[1.6] wrap-break-word;
+  }
+}
