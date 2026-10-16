@@ -57,3 +57,33 @@ export const nonfictionProducts = [
     coverColor: "clay",
   },
 ];
+
+export const staffPicksProducts = [
+{
+  id: "braiding-sweetgrass",
+  name: "Braiding Sweetgrass",
+  author: "Robin Wall Kimmerer",
+  category: "Staff Picks",
+  price: 340.0,
+  image: "/images/staffpicks/braiding-sweetgrass.jpeg",
+  coverColor: "olive",
+},
+{
+  id: "piranesi",
+  name: "Piranesi",
+  author: "Susanna Clarke",
+  category: "Staff Picks",
+  price: 255.0,
+  image: "/images/staffpicks/piranesi.jpeg",
+  coverColor: "purple",
+},
+{
+  id: "before-the-coffee-gets-cold",
+  name: "Before the Coffee Gets Cold",
+  author: "Toshikazu Kawaguchi",
+  category: "Staff Picks",
+  price: 235.0,
+  image: "/images/staffpicks/before-the-coffee-gets-cold.jpeg",
+  coverColor: "ochre",
+},
+];
