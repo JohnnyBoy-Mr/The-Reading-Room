@@ -31,7 +31,7 @@ export function Hero() {
 
         {/* Call to Action */}
         <a
-          href="#fiction"
+          href="#books"
           className="inline-flex items-center justify-center rounded-bookstore bg-ember px-6 py-3 font-body text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-clay"
         >
           Explore Our Books

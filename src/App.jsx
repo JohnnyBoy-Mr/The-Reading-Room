@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import { Navbar } from './components/Header'
 import { Hero } from './components/Hero'
-import { Fiction } from './components/Fiction'
-import { NonFiction } from './components/NonFiction'
-import { StaffPicks } from './components/StaffPicks'
+import { BookGrid } from './components/BookGrid'
 import { Events } from './components/Events'
 import { Footer } from './components/Footer'
 
@@ -11,13 +9,12 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div id="top" className="min-h-screen bg-bg">
+    <div id="top"
+      className="min-h-screen w-full min-w-0 bg-bg">
       <Navbar />
-      <main>
+      <main className="w-full min-w-0">
         <Hero />
-        <Fiction />
-        <NonFiction />
-        <StaffPicks />
+        <BookGrid />
         <Events />
       </main>
       <Footer />

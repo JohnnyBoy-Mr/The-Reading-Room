@@ -32,8 +32,44 @@
   --radius-bookstore: 6px;
 }
 
-body {
-  background-color: var(--color-bg);
-  color: var(--color-ink);
-  font-family: var(--font-body);
+/* Keep your existing @theme variables here */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  #root {
+    width: 100%;
+    min-width: 0;
+  }
+
+  img,
+  video,
+  svg {
+    max-width: 100%;
+  }
+
+  img,
+  video {
+    height: auto;
+  }
 }

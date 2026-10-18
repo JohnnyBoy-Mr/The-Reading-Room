@@ -5,7 +5,7 @@ export function Events() {
     <section
       id="events"
       aria-labelledby="events-title"
-      className="bg-surface px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
+      className="scroll-mt-24 bg-surface px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
     >
       <div className="mx-auto w-full max-w-width">
         {/* Section Heading */}

@@ -87,3 +87,11 @@ export const staffPicksProducts = [
   coverColor: "ochre",
 },
 ];
+
+
+
+export const products = [
+  ...fictionProducts,
+  ...nonfictionProducts,
+  ...staffPicksProducts,
+];

@@ -13,7 +13,7 @@ export default function BookCard({
   }).format(book.price);
 
   return (
-    <article className="min-w-0">
+    <article className="min-w-0 w-full">
       {/* Book Cover */}
       <div className="aspect-3/4 overflow-hidden rounded-bookstore bg-surface">
         <img
