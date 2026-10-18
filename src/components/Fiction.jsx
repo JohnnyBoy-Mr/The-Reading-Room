@@ -1,17 +1,20 @@
-
+import { useState } from "react";
 import { fictionProducts as products } from "../data/product.js";
+import BookCard from "./BookCard";
 
 export function Fiction() {
+  const [quantities, setQuantities] = useState({});
+
   const fictionBooks = products.filter(
-    (product) => product.category === "Fiction"
+    (product) => product.category === "Fiction",
   );
 
-  const formatPrice = (price) =>
-    new Intl.NumberFormat("en-ZA", {
-      style: "currency",
-      currency: "ZAR",
-      maximumFractionDigits: 0,
-    }).format(price);
+  const handleQuantityChange = (bookId, newQuantity) => {
+    setQuantities((prev) => ({
+      ...prev,
+      [bookId]: newQuantity,
+    }));
+  };
 
   return (
     <section
@@ -19,7 +22,6 @@ export function Fiction() {
       aria-labelledby="fiction-title"
       className="mx-auto w-full max-w-width px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
     >
-      {/* Section Heading */}
       <div className="mb-7 flex flex-wrap items-baseline justify-between gap-3">
         <h2
           id="fiction-title"
@@ -28,40 +30,19 @@ export function Fiction() {
           Fiction Favorites
         </h2>
 
-        <p className="text-sm text-ink-soft">
-          Stories to get lost in
-        </p>
+        <p className="text-sm text-ink-soft">Stories to get lost in</p>
       </div>
 
-      {/* Book Grid */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {fictionBooks.map((book) => (
-          <article key={book.id} className="min-w-0">
-            {/* Book Cover */}
-            <div className="aspect-3/4 overflow-hidden rounded-bookstore bg-surface">
-              <img
-                src={book.image}
-                alt={`Cover of ${book.name} by ${book.author}`}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </div>
-
-            {/* Book Information */}
-            <div className="pt-4">
-              <h3 className="font-heading text-lg font-semibold text-ink">
-                {book.name}
-              </h3>
-
-              <p className="mt-1 text-sm text-ink-soft">
-                {book.author}
-              </p>
-
-              <p className="mt-2 font-semibold text-ink">
-                {formatPrice(book.price)}
-              </p>
-            </div>
-          </article>
+          <BookCard
+            key={book.id}
+            book={book}
+            quantity={quantities[book.id] ?? 0}
+            onQuantityChange={(newQuantity) =>
+              handleQuantityChange(book.id, newQuantity)
+            }
+          />
         ))}
       </div>
     </section>
